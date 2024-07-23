@@ -132,9 +132,11 @@
   <ItemGroup>
     <ClCompile Include="Tam-Text.cpp" />
     <ClCompile Include="TextDocument.cpp" />
+    <ClCompile Include="WindowComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TextDocument.h" />
+    <ClInclude Include="WindowComponent.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
