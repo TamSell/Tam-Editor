@@ -1,16 +1,30 @@
 #pragma once
+#include <SFML/Graphics.hpp>
 #include <fstream>
-#include <sstream>
 #include <iostream>
+#include <locale>
+#include <sstream>
+#include <vector>
+
+#include <string>
 
 class TextDocument
 {
 
 public:
-	bool init(std::string& fileName);
+
+	bool init(std::string fileName);
+
+	
+	sf::String getLine(int lineNumber);
+	int getLineCount() const;
 
 
 private:
-	std::ofstream myFile;
+	bool initLineBuffer();
+	sf::String buffer;
+	int length;
+	std::vector<int> lineBuffer;
+	sf::String convertUtf32Sf(const std::string& inString);
 };
 

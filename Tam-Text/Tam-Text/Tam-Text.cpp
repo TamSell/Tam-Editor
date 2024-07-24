@@ -1,26 +1,11 @@
-#include "TextDocument.h"
 #include <SFML/Graphics.hpp>
+#include "TextDocument.h"
+#include "TextView.h"
 
 int main()
 {
-	TextDocument myTextDoc;
-	std::string fileName;
-	sf::RenderWindow window;
-
-	std::cout << "Enter File Name: " << "\n";
-
-	std::cin >> fileName;
-
-	if (myTextDoc.init(fileName) == true)
-	{
-		std::cout << "Success";
-		window.create(sf::VideoMode(400, 800), "Tam-Text");
-	}
-	else
-	{
-		std::cout << "Failure";
-	}
-
+	sf::RenderWindow window(sf::VideoMode(450, 720), "Tam-Text");
+	sf::Color defaultBackgroundColor = sf::Color::Blue;
 
 	while (window.isOpen())
 	{
@@ -33,6 +18,10 @@ int main()
 				window.close();
 			}
 		}
+
+		window.clear(defaultBackgroundColor);
+
+		window.display();
 
 	}
 

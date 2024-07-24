@@ -24,12 +24,18 @@
     <ClCompile Include="WindowComponent.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="TextView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="TextDocument.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="WindowComponent.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="TextView.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
